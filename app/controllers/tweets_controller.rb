@@ -14,6 +14,6 @@ class TweetsController < ApplicationController
   def destroy # possibly mark tweets as deleted instead of actually deleting them?
     tweet = Tweet.find_by(id: params[:id])
     tweet.destroy
-    render json: { "message": "Tweet successfully deleted." }
+    render json: { message: "Tweet successfully deleted." }
   end
 end
